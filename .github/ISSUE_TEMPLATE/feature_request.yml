@@ -1,0 +1,32 @@
+name: Предложение
+
+description: Предложить улучшение или новую функцию
+labels: ["enhancement"]
+
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему решает предложение
+      placeholder: Сейчас бот отвечает даже на «почему» внутри цитаты
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Как вы видите решение
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы, которые вы рассматривали
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Готовность помочь
+      options:
+        - label: Готов(а) прислать pull request

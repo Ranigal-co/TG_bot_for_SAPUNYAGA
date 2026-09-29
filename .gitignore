@@ -1,0 +1,30 @@
+# Секреты
+.env
+.env.*
+!.env.example
+
+# Зависимости и кэш
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+htmlcov/
+.coverage
+
+# Данные приложения (file_id кружка — не коммитим)
+data/*
+!data/.gitkeep
+
+# Медиа (свой кружок кладёте локально)
+media/*
+!media/.gitkeep
+!media/README.md
+
+# Редакторы и ОС
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

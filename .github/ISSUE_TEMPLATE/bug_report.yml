@@ -1,0 +1,44 @@
+name: Ошибка
+
+description: Сообщить о некорректном поведении бота
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что нашли время описать проблему!
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Что произошло
+      description: Опишите проблему, включая текст сообщения-триггера, если это возможно
+      placeholder: Бот не ответил на «почему ты это сделал»
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Как воспроизвести
+      description: Пошаговые действия
+      placeholder: |
+        1. Добавил бота в группу
+        2. Написал ...
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: Окружение
+      description: Версия Python, способ запуска (venv / Docker), версия бота
+      placeholder: Python 3.12, Docker, v1.0.0
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи
+      description: При возможности вставьте релевантные строки из логов
+      render: shell

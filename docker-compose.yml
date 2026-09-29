@@ -1,0 +1,14 @@
+services:
+  bot:
+    build: .
+    container_name: tg-why-bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./media:/app/media
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
